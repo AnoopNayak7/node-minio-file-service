@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  minio-server:
+    image: minio/minio
+    container_name: minio-server
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio-data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+
+  mongodb-server:
+    image: mongo
+    container_name: mongodb-server
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  minio-data:
+  mongo-data:
