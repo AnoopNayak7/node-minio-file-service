@@ -1,0 +1,1 @@
+# node-minio-file-service
