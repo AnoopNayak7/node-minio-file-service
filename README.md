@@ -1,5 +1,5 @@
 
-# Node.js MinIO Image Manager
+# Node.js MinIO File Service
 
 This project is a Node.js application that handles image uploads, updates, deletions, and listings using MinIO for storage. It provides a RESTful API for managing images stored in a MinIO bucket.
 
